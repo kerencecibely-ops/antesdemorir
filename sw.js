@@ -1,8 +1,8 @@
 // Imperdibles (IADM) · service worker
-const VERSION = 'iadm-v1';
+const VERSION = 'iadm-v2';
 const SHELL = ['./', './index.html', './manifest.webmanifest',
-  './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-192.png', './icons/maskable-512.png',
-  './icons/apple-touch-icon.png', './icons/favicon.png'];
+  './icon-192.png', './icon-512.png', './maskable-192.png', './maskable-512.png',
+  './apple-touch-icon.png', './favicon.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -47,7 +47,7 @@ async function nudge() {
   s.sent = s.sent || {};
   const show = (key, title, body) => {
     s.sent[key] = t;
-    return self.registration.showNotification(title, {body, icon: 'icons/icon-192.png', badge: 'icons/maskable-192.png', tag: key, data: {url: './'}});
+    return self.registration.showNotification(title, {body, icon: 'icon-192.png', badge: 'maskable-192.png', tag: key, data: {url: './'}});
   };
   const [h, m] = (s.hour || '20:00').split(':').map(Number);
   const [mh, mm] = (s.movieHour || '20:00').split(':').map(Number);
