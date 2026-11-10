@@ -1,0 +1,24 @@
+{
+  "name": "Imperdibles antes de morir",
+  "short_name": "IADM",
+  "description": "Películas, libros, anime, videojuegos y temas por aprender. La ruleta elige por ti.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0f1a",
+  "theme_color": "#0d0f1a",
+  "lang": "es",
+  "categories": ["entertainment", "lifestyle", "productivity"],
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+    {"src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Ruleta", "short_name": "Ruleta", "url": "./#ruleta", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]},
+    {"name": "Catálogo", "short_name": "Catálogo", "url": "./#catalogo", "icons": [{"src": "icons/icon-192.png", "sizes": "192x192"}]}
+  ]
+}
